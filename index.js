@@ -1,3 +1,4 @@
+
 const express = require("express");
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -12,8 +13,8 @@ app.use(cors({
 app.get("/", function (request, response) {
   response.send("Team crazy coopers");
 });
-app.listen(10000, function () {
-  console.log("Started application on port %d", 10000);
+app.listen(1000, function () {
+  console.log("Started application on port %d", 1000);
 });
 
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -45,5 +46,6 @@ mongoose.connect(uri, {
 // Require tag routes
 require('./app/routes/tags.routes')(app);
 require('./app/routes/emails-track.routes')(app);
+
 
 
