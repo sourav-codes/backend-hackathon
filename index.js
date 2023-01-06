@@ -13,9 +13,11 @@ app.use(cors({
 app.get("/", function (request, response) {
   response.send("Team crazy coopers");
 });
-app.listen(10000, function () {
-  console.log("Started application on port %d", 10000);
-});
+// app.listen(10000, function () {
+//   console.log("Started application on port %d", 10000);
+// });
+
+app.listen(process.env.PORT||3000)
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
